@@ -35,7 +35,10 @@ def process_image(image):
     insect_counts = dict(Counter(detected_insects))
 
     return insect_counts
-
+    
+@app.route("/")
+def helloworld():
+    return "Hello World!"
 
 # Define the API endpoint to accept image uploads
 @app.route('/upload', methods=['POST'])
